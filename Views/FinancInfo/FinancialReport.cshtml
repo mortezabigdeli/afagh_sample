@@ -1,0 +1,37 @@
+@{
+	ViewData["Title"] = "گزارش سوابق مالی";
+	Layout = "~/Views/Shared/_FinancInfoLayout.cshtml";
+	@model List<my_projects.Models.FinancialReportViewModel>;
+}
+
+<div class="container">
+	<h5> گزارش غیر فعال شدن صلاحیت های پرونده جاری</h5>
+	<table class="table align-right">
+		<thead>
+			<tr>
+				<th scope="col"> شرح</th>
+				<th scope="col">تاریخ سند</th>
+				<th scope="col">بدهکار(ریال) </th>
+				<th scope="col">بستانکار(ریال) </th>
+				<th scope="col"> مانده </th>
+
+			</tr>
+		</thead>
+		<tbody id="">
+			@{
+				foreach (var item in Model)
+				{
+					<tr>
+						<td>@item.Description</td>
+						<td>@item.DocumentDate</td>
+						<td>@item.Debtor</td>
+						<td>@item.Creditor</td>
+						<td>@item.Remaining</td>
+					</tr>
+				}
+			}
+
+		</tbody>
+	</table>
+
+</div>

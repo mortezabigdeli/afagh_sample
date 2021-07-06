@@ -1,0 +1,52 @@
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+
+<div class="row ">
+	<div class="col-2 border-left p-0">
+		<div class="text-center p-4 border-bottom">
+			<div class="m-4">
+				<i class="fa fa-5x fa-user-circle-o" aria-hidden="true"></i>
+			</div>
+			<div class="mt-2 mb-2"> <button type="button" class="btn btn-info">
+					<i class="fa fa-print" aria-hidden="true"></i>
+					<span class="fs-s"> چاپ اطلاعات پرونده</span>
+
+				</button>
+			</div>
+			<div class="fs-s align-right mt-1 ">
+				<span class="px-2">نام کاربر</span>
+				<span>مرتضی بیگدلی</span>
+			</div>
+			<div class="fs-s align-right mt-1 mb-4">
+				<span class=" px-2">شماره نظام</span>
+				<span>2575548</span>
+			</div>
+
+
+		</div>
+		<div class="list-group list-group-flush align-right">
+			<a class="list-group-item list-group-item-action list-group-item-light" href="#!">
+				<i class="fa fa-chevron-left" aria-hidden="true"></i>
+				پروفایل</a>
+			<a class="list-group-item list-group-item-action list-group-item-light" href="#!">
+				<i class="fa fa-chevron-left" aria-hidden="true"></i>
+				تاریخچه ضرایب موثر</a>
+			<a class="list-group-item list-group-item-action list-group-item-light" href="#!">
+				<i class="fa fa-chevron-left" aria-hidden="true"></i>
+				پروانه اشتغال</a>
+			<a class="list-group-item list-group-item-action list-group-item-light" id="DisabledCredentials" href="#!">
+				<i class="fa fa-chevron-left" aria-hidden="true"></i>
+				غیر فعالی صلاحیت ها</a>
+			<a class="list-group-item list-group-item-action list-group-item-light" href="#!">
+				<i class="fa fa-chevron-left" aria-hidden="true"></i>
+				احکام انتظامی</a>
+
+		</div>
+	</div>
+	<div class="col-10" style="display:block;">
+		@RenderBody()
+	</div>
+</div>
