@@ -1,0 +1,20 @@
+@{
+	@model my_projects.Models.LinkIconInfoViewModel
+}
+
+<div class="d-inline-flex justify-content-center outer-shadow align-items-center border rounded m-3">
+	<div class="p-2 border-left">
+		<i class="@Model.icon @Model.color p-3 fa-lg"></i>
+	</div>
+	<div class="text-right pr-2">
+		
+		<div class="fs-es font-weight-bold p-1">@Model.key</div>
+		<div class="fs-es p-1">@Model.value</div>
+	</div>
+	<div class="pr-5 pl-2">
+		<a href="@Model.link">
+		<i class="fa fa-eye rounded border @Model.color p-1 "></i>
+		</a>
+	</div>
+
+</div>

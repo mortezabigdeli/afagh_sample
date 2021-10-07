@@ -1,0 +1,30 @@
+[
+	{
+		"Description": "مانده بدهکاری عضو از مال 1397",
+		"DocumentDate": "1399/04/29",
+		"Debtor": "2,700,000",
+		"Creditor": "0",
+		"Remaining": "2,800,000"
+	},
+	{
+		"Description": "مانده بدهکاری عضو از مال 1398",
+		"DocumentDate": "1399/04/29",
+		"Debtor": "5,800,000",
+		"Creditor": "0",
+		"Remaining": "2,800,000"
+	},
+	{
+		"Description": "مانده بدهکاری عضو از مال 1398",
+		"DocumentDate": "1399/04/29",
+		"Debtor": "6,800,000",
+		"Creditor": "0",
+		"Remaining": "1,800,000"
+	},
+	{
+		"Description": "مانده بدهکاری عضو از مال 1399",
+		"DocumentDate": "1399/04/29",
+		"Debtor": "1,800,000",
+		"Creditor": "125",
+		"Remaining": "5,800,000"
+	}
+]

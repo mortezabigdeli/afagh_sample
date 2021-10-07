@@ -1,0 +1,41 @@
+@{
+	@model Dictionary<List<ProfileSectionViewModel>,string[]>;
+    List<ProfileSectionViewModel> _model= new  List<ProfileSectionViewModel>();
+    string[] cardInfo={};
+  foreach (KeyValuePair<List<ProfileSectionViewModel>, string[]> data in Model)  
+    {  
+       _model=data.Key;
+       cardInfo= data.Value;
+    }
+}
+
+  
+<div class="container">
+	<div class="card mt-4 outer-shadow">
+		<div class="card-body">
+        <div class="row align-right">
+          <div class="col-auto border-bottom @cardInfo[1]  mx-3">
+         @{ <i class="@cardInfo[0]"></i>
+            @cardInfo[2]
+         }
+            </div>
+          <div class="col border-bottom  ml-4">&nbsp</div>
+          </div>
+			<div class="grid-container">
+
+      @{
+          foreach(var item in _model)
+          {
+
+             <div class="grid-item">
+               <div class="text-muted pb-1">@item.Key</div>
+               <div class="font-weight-bold pt-1">@item.Value</div>
+             </div>
+          }
+}
+        
+      </div>
+		</div>
+	</div>
+
+</div>

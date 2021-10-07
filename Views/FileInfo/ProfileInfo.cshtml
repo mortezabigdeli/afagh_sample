@@ -1,0 +1,32 @@
+@{
+	@model my_projects.Models.ProfileVewModel;
+	var spec=new Dictionary<List<ProfileSectionViewModel>,string[]>();
+	var address=new Dictionary<List<ProfileSectionViewModel>,string[]>();
+	var office=new Dictionary<List<ProfileSectionViewModel>,string[]>();
+		
+	string[] cardInfo ={"fa fa-lg fa-address-card-o text-primary","border-primary","مشخصات"};
+	string[] Address ={"fa fa-lg fa-home text-warning", "border-warning","اطلاعات محل سکونت و محل اشتغال"};
+	string[] Office ={"fa fa-lg fa-shopping-bag text-info", "border-info","دفتر مهندسی جاری"};
+
+	spec.Add(Model.Specs,cardInfo);
+	address.Add(Model.Address,Address);
+	office.Add(Model.Office,Office);
+
+}
+
+<div class="container">
+
+			@await Html.PartialAsync("~/Views/Components/CardInfo.cshtml",spec)
+			<div class="d-flex flex-wrap">
+				@{
+					@foreach (var item in Model.Info)
+					{
+						@await Html.PartialAsync("~/Views/Components/IconInfo.cshtml",item)
+
+					}
+				}
+			</div>
+			@await Html.PartialAsync("~/Views/Components/CardInfo.cshtml",address)
+			@await Html.PartialAsync("~/Views/Components/CardInfo.cshtml",office)
+
+</div>

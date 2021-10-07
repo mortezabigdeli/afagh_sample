@@ -1,46 +1,51 @@
 @{
 	ViewBag.Title = "Index";
-	Layout = "~/Views/Shared/_MasterLayout.cshtml";
 }
 
-
-<div class="row">
-	<div class="col-2 border-left p-0" style="height: 100%;">
+<div class="row"  id="nav-profile">
+	
+	<div class="col-2 border-left mh-100 p-0">
 		<div class="text-center p-4 border-bottom">
 			<div class="m-4">
-				<i class="fa fa-5x fa-file-text-o" aria-hidden="true"></i>
+				<i class="fa fa-5x fa-file-text-o text-primary" aria-hidden="true"></i>
 			</div>
-			<div class="mt-2 mb-2"> <button type="button" class="btn btn-info">
+			<div class="mt-2 mb-2 ">
+			 <button type="button"  class="btn -btn-secondary">
 					<i class="fa fa-money" aria-hidden="true"></i>
-					<span class="fs-s">پرداخت بدهی به سازمان</span>
-
+					<span class="fs-es">پرداخت بدهی به سازمان</span>
 				</button>
 			</div>
 			<div class="fs-s align-right mt-1 ">
-				<span class="px-2"> شناسه پرداخت</span>
-				<span>4878454 </span>
+				<div class="px-2 fs-es-2 text-muted"> شناسه پرداخت</div>
+				<div class="px-2  align-left fs-es text-secondary">2154542 </div>
 			</div>
 			<div class="fs-s align-right mt-1 mb-4">
-				<span class=" px-2">مبلغ بدهی </span>
-				<span>251478</span>
+				<div class="px-2 fs-es-2 text-danger">مبلغ بدهی </div>
+				<div class="px-2  align-left fs-es text-danger">251478</div>
 			</div>
 
 		</div>
-		<div class="list-group list-group-flush align-right">
+		<div class="list-group list-group-flush align-right pt-2 px-3">
 			<a class="list-group-item list-group-item-action list-group-item-light" href="#!">
-				<i class="fa fa-chevron-left" aria-hidden="true"></i>
+				<i class="fa fa-chevron-left pl-1" aria-hidden="true"></i>
 				عملکرد مالیاتی</a>
-			<a class="list-group-item list-group-item-action list-group-item-light" href="#!">
-				<i class="fa fa-chevron-left" aria-hidden="true"></i>
+			<a class="list-group-item list-group-item-action list-group-item-light" id="stepPayments" href="#!">
+				<i class="fa fa-chevron-left pl-1" aria-hidden="true"></i>
 				پرداخت های مرحله ای</a>
 			<a class="list-group-item list-group-item-action list-group-item-light" id="financialReport" href="#!">
-				<i class="fa fa-chevron-left" aria-hidden="true"></i>
+				<i class="fa fa-chevron-left pl-1" aria-hidden="true"></i>
 				سوابق مالی</a>
 
 		</div>
 	</div>
 
-	<div class="col-10">
+	<div class="col-10 bg-light" >
+	<div class="card my-3" >
+  <div class="card-body" id="finance-info-container">
 		@RenderBody()
-	</div>
+  
+  </div>
 </div>
+	</div>
+	</div>
+

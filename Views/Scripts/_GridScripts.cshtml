@@ -1,0 +1,33 @@
+	 <script>     
+	$(document).ready(function () {        
+	   gridDataTableView("Grid Example.xls");        
+	});  
+	 
+	gridDataTableView = function (fname) {  
+		$('#tbGrid').dataTable({  
+			"language": {
+			"infoFiltered":   "",
+			 "emptyTable":     "هیچ داده ای برای نمایش وجود ندارد",
+			"infoEmpty":      "",
+	"loadingRecords": "لطفا صبر کنید...",
+	"processing":     "در حال پردازش...",
+	"zeroRecords":    "یافت نشد",
+			"info": "_PAGE_ از _PAGES_",
+			"search": "جستجو ",
+				"paginate": {
+		"first":      "ابتدا",
+		"last":       "انتها",
+		"next":       "بعدی",
+		"previous":   "قبلی"
+	},
+		},
+			
+			"pageLength": 4,
+			"bFilter": true,  
+			"bLengthChange": false, "bPaginate": true, "bInfo": true,  
+			dom: 'Bfrtip',              
+			"order": [[0, 'desc'], [1, 'desc']],  
+		 
+		});  
+	}  
+</script>  

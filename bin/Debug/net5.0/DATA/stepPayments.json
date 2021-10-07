@@ -1,0 +1,57 @@
+[
+	{
+		"Id": "1",
+		"ProcessTitle": "نظارت سازه",
+		"ProcessState": "پایان یافته",
+		"ProcessId": "17025487452",
+		"OwnerName": "امین خواجه",
+		"Plate": "251241",
+		"StepTitle": "مرحله اول-خروج نقشه",
+		"PaymentDate": "1400/02/04",
+		"Amountpaid": "524,145"
+	},
+	{
+		"Id": "2",
+		"ProcessTitle": "نظارت سازه",
+		"ProcessState": "پایان یافته",
+		"ProcessId": "17025487452",
+		"OwnerName": "امین خواجه",
+		"Plate": "251241",
+		"StepTitle": "شروع به کار گذشت 10 درصد از مدت قرار داد",
+		"PaymentDate": "1400/02/04",
+		"Amountpaid": "524,145"
+	},
+	{
+		"Id": "3",
+		"ProcessTitle": "نظارت سازه",
+		"ProcessState": "پایان یافته",
+		"ProcessId": "17025487452",
+		"OwnerName": "امین خواجه",
+		"Plate": "251241",
+		"StepTitle": "پایان کار اتمام مدت قرار داد",
+		"PaymentDate": "1400/02/04",
+		"Amountpaid": "524,145"
+	},
+	{
+		"Id": "4",
+		"ProcessTitle": "نظارت سازه",
+		"ProcessState": "پایان یافته",
+		"ProcessId": "17025487452",
+		"OwnerName": "امین خواجه",
+		"Plate": "251241",
+		"StepTitle": "اسکلت گذشت 40% از مدت قرار داد",
+		"PaymentDate": "1400/02/04",
+		"Amountpaid": "524,145"
+	},
+	{
+		"Id": "5",
+		"ProcessTitle": "نظارت سازه",
+		"ProcessState": "پایان یافته",
+		"ProcessId": "17025487452",
+		"OwnerName": "امین خواجه",
+		"Plate": "251241",
+		"StepTitle": "سفت کاری گذشت 60مدت قرار داد",
+		"PaymentDate": "1400/02/04",
+		"Amountpaid": "524,145"
+	}
+]

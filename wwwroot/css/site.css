@@ -1,7 +1,59 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: 400;
+	src: url("../asset/fonts/IRANSansWeb.eot?#iefix") format("embedded-opentype"),
+		url(../asset/fonts/IRANSansWeb.woff2) format("woff2"), url(../asset/fonts/IRANSansWeb.woff) format("woff"),
+		url(../asset/fonts/IRANSansWeb.ttf) format("truetype");
+}
+
+:root {
+	--color-primary: #4286f5;
+	--color-secondary: #ecf2fe;
+	--color-accent: #ff3400;
+	--color-heading: #1b0760;
+	--color-body: #918ca4;
+}
+body {
+	font-family: IRANSans;
+	height: 100%;
+	margin-bottom: 60px;
+}
+html {
+	direction: rtl;
+	height: 100%;
+	position: relative;
+	font-size: 95.5%;
+}
+
+.fs-es-2 {
+	font-size: 0.7rem;
+}
+.fs-es {
+	font-size: 0.8rem;
+}
+.fs-s {
+	font-size: 1rem;
+}
+.fs-m {
+	font-size: 1.5rem;
+}
+
+.-bg-primary {
+	background-color: var(--color-primary);
+}
+.-bg-secondary {
+	background-color: var(--color-secondary);
+	color: var(--color-primary);
+}
+.-btn-secondary {
+	background-color: var(--color-secondary);
+	color: var(--color-primary);
+	border: #918ca4;
+}
 
 /* loader */
+
 .loader {
 	border: 16px solid #f3f3f3;
 	border-radius: 50%;
@@ -37,12 +89,13 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 /*-------------------------------*/
 
-.fs-s {
-	font-size: smaller;
-}
 .align-right {
 	text-align: right;
 	direction: rtl;
+}
+.align-left {
+	text-align: left;
+	direction: ltr;
 }
 a.navbar-brand {
 	white-space: normal;
@@ -50,7 +103,6 @@ a.navbar-brand {
 	word-break: break-all;
 }
 
-/* Provide sufficient contrast against white background */
 a {
 	color: #0366d6;
 }
@@ -66,18 +118,6 @@ a {
 	color: #fff;
 	background-color: #1b6ec2;
 	border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-	direction: rtl;
-	font-size: 14px;
-}
-@media (min-width: 768px) {
-	html {
-		font-size: 16px;
-	}
 }
 
 .border-top {
@@ -96,17 +136,6 @@ button.accept-policy {
 	line-height: inherit;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-	position: relative;
-	min-height: 100%;
-}
-
-body {
-	/* Margin bottom by footer height */
-	margin-bottom: 60px;
-}
 .footer {
 	position: absolute;
 	bottom: 0;
@@ -114,44 +143,65 @@ body {
 	white-space: nowrap;
 	line-height: 60px; /* Vertically center the text there */
 }
+.nav-link.active {
+	border: 1px solid transparent !important;
+	border-bottom: #1094ec 2px solid !important;
+}
+.nav-link {
+	border: 1px solid transparent !important;
+}
 
-.project-tab {
-	padding: 10%;
-	margin-top: -8%;
+.nav-link:hover {
+	border: 1px solid transparent !important;
 }
-.project-tab #tabs {
-	background: #007b5e;
-	color: #eee;
+.nav-link.active:hover {
+	border: transparent transparent !important;
+	border-bottom: #1094ec 2px solid !important;
 }
-.project-tab #tabs h6.section-title {
-	color: #eee;
+.nav-tabs {
+	border-bottom: none;
 }
-.project-tab #tabs .nav-tabs .nav-item.show .nav-link,
-.nav-tabs .nav-link.active {
-	color: #0062cc;
-	background-color: transparent;
-	border-color: transparent transparent #f3f3f3;
-	border-bottom: 3px solid !important;
-	font-size: 16px;
-	font-weight: bold;
+.list-group-item {
+	border: 1px solid transparent !important;
+	font-size: 0.8rem !important;
 }
-.project-tab .nav-link {
-	border: 1px solid transparent;
-	border-top-left-radius: 0.25rem;
-	border-top-right-radius: 0.25rem;
-	color: #0062cc;
-	font-size: 16px;
-	font-weight: 600;
+.list-group-item:hover {
+	background-color: var(--color-secondary) !important;
+	border-radius: 4px !important;
+	color: var(--color-primary) !important;
+	font-weight: 700 !important;
 }
-.project-tab .nav-link:hover {
-	border: none;
+
+.dataTables_paginate,
+.dataTables_info {
+	font-size: 0.8rem !important;
 }
-.project-tab thead {
-	background: #f3f3f3;
-	color: #333;
+
+.dataTables_filter {
+	font-size: 0.8rem !important;
 }
-.project-tab a {
-	text-decoration: none;
-	color: #333;
-	font-weight: 600;
+.he-100 {
+	height: 85vh !important;
+}
+.logo {
+	height: 32px;
+	width: 32px;
+}
+.pointer {
+	cursor: pointer;
+}
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	padding: 5px;
+}
+.grid-item {
+	background-color: rgba(255, 255, 255, 0.8);
+	border-bottom: 0.5px solid #eeeeee;
+	padding: 5px 20px;
+	font-size: 0.8rem;
+	text-align: right;
+}
+.outer-shadow {
+	box-shadow: 2px 2px 6px 4px #eeeeee !important;
 }

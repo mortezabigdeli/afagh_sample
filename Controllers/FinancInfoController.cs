@@ -1,11 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using my_projects.Models;
+using System.Text.Json;
 public class FinancInfoController : Controller
 {
 
@@ -15,17 +12,19 @@ public class FinancInfoController : Controller
 	}
 	public IActionResult FinancialReport()
 	{
-		List<FinancialReportViewModel> model = new List<FinancialReportViewModel>();
-		model.Add(
-			new FinancialReportViewModel()
-			{
-				Description = "مانده بدهکاری عضو از مال 1397",
-				DocumentDate = "1399/04/29",
-				Debtor = "2,800,000",
-				Creditor = "0",
-				Remaining = "2,800,000",
-			});
-		return View(model);
+		// System.Threading.Thread.Sleep(3000);
+		var data=ReadJsonFile.read(AppContext.BaseDirectory+@"\DATA\financialReport.json");
+		var options = new JsonSerializerOptions(JsonSerializerDefaults.Web);
+       var  model = JsonSerializer.Deserialize<List<FinancialReportViewModel>>(data, options);
+		return PartialView(model);
+	}
+		public IActionResult StepPayments()
+	{
+		// System.Threading.Thread.Sleep(3000);
+		var data=ReadJsonFile.read(AppContext.BaseDirectory+@"\DATA\StepPayments.json");
+		var options = new JsonSerializerOptions(JsonSerializerDefaults.Web);
+        var model = JsonSerializer.Deserialize<List<StepPaymentsViewModel>>(data, options);	
+		return PartialView(model);
 	}
 
 

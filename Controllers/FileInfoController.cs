@@ -1,12 +1,8 @@
 using System;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using my_projects.Models;
-
+using System.Text.Json;
 public class FileInfoController : Controller
 {
 	public IActionResult Index()
@@ -15,18 +11,17 @@ public class FileInfoController : Controller
 	}
 	public IActionResult DisabledCredentials()
 	{
-		List<DisabledCredentialsViewMode> model = new List<DisabledCredentialsViewMode>();
-		model.Add(
-			new DisabledCredentialsViewMode()
-			{
-				StartDate = "1399/01/30",
-				EndDate = "1400/01/300",
-				OrganizationalField = "تاسیسات مکانیکی",
-				TypeOfCompetence = "طراحی",
-				ShareAndWork = "سهم",
-				DateOfRegistration = "1399/02/01",
-				Description = "باید عضو اصلی دفتر شود",
-			});
-		return View(model);
+		var data=ReadJsonFile.read(AppContext.BaseDirectory+@"\DATA\DisabledCredential.json");
+		var options = new JsonSerializerOptions(JsonSerializerDefaults.Web);
+       var  model = JsonSerializer.Deserialize<List<DisabledCredentialsViewMode>>(data, options);
+		return PartialView(model);
+	}
+		public IActionResult ProfileInfo()
+	{
+		var data=ReadJsonFile.read(AppContext.BaseDirectory+@"\DATA\Profile.json");
+		var options = new JsonSerializerOptions(JsonSerializerDefaults.Web);
+        var  model = JsonSerializer.Deserialize<ProfileVewModel>(data, options);
+	   Console.Write(model);
+		return PartialView(model);
 	}
 }

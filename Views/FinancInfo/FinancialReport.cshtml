@@ -1,12 +1,14 @@
 @{
 	ViewData["Title"] = "گزارش سوابق مالی";
-	Layout = "~/Views/Shared/_FinancInfoLayout.cshtml";
 	@model List<my_projects.Models.FinancialReportViewModel>;
+
 }
 
-<div class="container">
-	<h5> گزارش غیر فعال شدن صلاحیت های پرونده جاری</h5>
-	<table class="table align-right">
+
+<div class="container he-100">
+	<h5 class="align-right fs-s font-weight-bold mb-3"> گزارش سوابق مالی</h5>
+
+	<table id="tbGrid" class="table hover text-center fs-es mt-3">
 		<thead>
 			<tr>
 				<th scope="col"> شرح</th>
@@ -33,5 +35,7 @@
 
 		</tbody>
 	</table>
-
 </div>
+ @await Html.PartialAsync("~/Views/Scripts/_GridScripts.cshtml")
+
+  
