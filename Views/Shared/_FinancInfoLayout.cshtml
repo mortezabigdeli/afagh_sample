@@ -2,9 +2,9 @@
 	ViewBag.Title = "Index";
 }
 
-<div class="row"  id="nav-profile">
+<div id="nav-profile">
 	
-	<div class="col-2 border-left mh-100 p-0">
+	<div class="border-left p-0 fixed-sidebar bg-white">
 		<div class="text-center p-4 border-bottom">
 			<div class="m-4">
 				<i class="fa fa-5x fa-file-text-o text-primary" aria-hidden="true"></i>
@@ -39,13 +39,12 @@
 		</div>
 	</div>
 
-	<div class="col-10 bg-light" >
-	<div class="card my-3" >
-  <div class="card-body" id="finance-info-container">
-		@RenderBody()
-  
-  </div>
-</div>
-	</div>
+		
+		
+			<div class="main-body px-5"  id="finance-info-container">
+					@RenderBody()
+			</div>
+
+		
 	</div>
 

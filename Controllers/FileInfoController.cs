@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using my_projects.Models;
 using System.Text.Json;
+
 public class FileInfoController : Controller
 {
 	public IActionResult Index()
@@ -11,10 +12,12 @@ public class FileInfoController : Controller
 	}
 	public IActionResult DisabledCredentials()
 	{
+		return PartialView();
+	}
+	public String getDisabledCredentials()
+	{
 		var data=ReadJsonFile.read(AppContext.BaseDirectory+@"\DATA\DisabledCredential.json");
-		var options = new JsonSerializerOptions(JsonSerializerDefaults.Web);
-       var  model = JsonSerializer.Deserialize<List<DisabledCredentialsViewMode>>(data, options);
-		return PartialView(model);
+		return data;
 	}
 		public IActionResult ProfileInfo()
 	{

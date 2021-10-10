@@ -9,21 +9,22 @@
 	<link rel="stylesheet" href="~/lib/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link href="~/css/datatables.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="~/css/mermaid.min.css" />
+	<link rel="stylesheet" href="~/lib/devEx/dx.light.css" />
 	<link rel="stylesheet" href="~/css/site.css" />
 </head>
 
 <body>
-	<div id="root">
+	<div id="root" >
 		<div class="loader"></div>
 		@await Html.PartialAsync("_Header")
-		<div id="container" class="container-fluid">
+		<div id="container" class="container-fluid p-0">
 			@RenderBody()
 		</div>
 		@await Html.PartialAsync("_Footer")
 	</div>
 	<script src="~/lib/jquery/dist/jquery.min.js" ></script>
-	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" ></script>
-	<script src="~/lib/jqDataTable/datatables.min.js" ></script>
+	<script src="~/lib/devEx/dx.web.js" ></script>
+	<!-- <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" ></script> -->
 	<script src="~/js/index.js" type="module" asp-append-version="true"></script>
 	
 </body>
