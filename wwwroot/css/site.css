@@ -192,7 +192,7 @@ button.accept-policy {
 }
 .grid-container {
 	display: grid;
-	grid-template-columns: auto auto auto auto auto;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 	padding: 5px;
 }
 .grid-item {
@@ -201,6 +201,11 @@ button.accept-policy {
 	padding: 5px 20px;
 	font-size: 0.8rem;
 	text-align: right;
+}
+.icon {
+	width: 50px;
+	padding: 20px 5px;
+	text-align: center;
 }
 .outer-shadow {
 	box-shadow: 2px 2px 6px 4px #eeeeee !important;
@@ -218,4 +223,14 @@ button.accept-policy {
 	margin-right: 15rem;
 	padding-top: 8rem;
 	padding-bottom: 6rem;
+}
+@media only screen and (max-width: 767px) {
+	.main-body {
+		margin-right: 0rem;
+		padding-top: 8rem;
+		padding-bottom: 6rem;
+	}
+	.fit {
+		width: 100%;
+	}
 }
